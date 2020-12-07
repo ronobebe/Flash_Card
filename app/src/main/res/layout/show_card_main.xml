@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:background="#F6F5F5"
+        android:layout_height="100dp"
+        android:id="@+id/toolbar">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/backArrow"
+            android:layout_margin="0dp"
+            android:padding="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/back_arrow"/>
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/backArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:id="@+id/header"
+            android:text="Show Cards"/>
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/header"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/backArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#717070"
+            android:textSize="16sp"
+            android:id="@+id/noteType"
+            android:text="Syntax (Array)"/>
+
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/header"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#717070"
+            android:textSize="16sp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/totalCards"
+            android:text="Total cards : 100"/>
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/addNotesLayout"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:elevation="6dp"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@drawable/textview_outline">
+
+        <ImageView
+            android:src="@drawable/notes_grey"
+            android:id="@+id/notes"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+
+
+        <TextView
+            android:layout_below="@+id/notes"
+            android:id="@+id/addNotes"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:elevation="6dp"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:textColor="#000"
+            android:textSize="20sp"
+android:scrollbars="vertical"
+            android:text="Some subjects take one day, and some will take multiple days. Some are just learning with nothing to implement.
+
+Each day I take one subject from the list below, watch videos about that subject, and write an implementation in:
+
+C - using structs and functions that take a struct * and something else as args
+C++ - without using built-in types
+C++ - using built-in types, like STL's std::list for a linked list
+Python - using built-in types (to keep practicing Python)
+and write tests to ensure I'm doing it right, sometimes just using simple assert() statements
+You may do Java or something else, this is just my thing "
+
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addNotesLayout"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:padding="20dp"
+        android:layout_height="100dp">
+
+        <Button
+            android:id="@+id/prev"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Prev"
+            android:textColor="#fff"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_bag"
+            />
+
+        <Button
+            android:id="@+id/known"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:text="Known"
+            android:textColor="#fff"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_bag"
+            />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="NEXT"
+            android:textColor="#fff"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_bag"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

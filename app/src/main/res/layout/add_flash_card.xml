@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:background="#F6F5F5"
+        android:layout_height="100dp"
+        android:id="@+id/toolbar">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/backArrow"
+            android:layout_margin="0dp"
+            android:padding="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/back_arrow"/>
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/backArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:id="@+id/header"
+            android:text="Add Card"/>
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/header"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/backArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#717070"
+            android:textSize="16sp"
+            android:id="@+id/noteType"
+            android:text="Syntax"/>
+
+
+        <ImageView
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/save"
+            android:padding="25dp"
+            android:layout_marginRight="0dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/save_grey"/>
+
+
+    </RelativeLayout>
+    <ScrollView
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:layout_height="0dp"
+        >
+
+        //add category
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/addcategoryTag"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#676666"
+            android:textSize="16sp"
+            android:text="Add Category"/>
+
+  <RelativeLayout
+    android:id="@+id/categorylayout"
+    app:layout_constraintTop_toBottomOf="@id/addcategoryTag"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/textview_outline">
+
+    <TextView
+        android:focusableInTouchMode="false"
+       android:focusable="false"
+        android:id="@+id/addcategory"
+        android:paddingLeft="10dp"
+        android:gravity="left|center"
+        android:maxLines="1"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="#676666"
+        android:textSize="15sp"
+        android:hint="Add Category Here"
+        />
+
+    <ImageView
+        android:padding="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/down_arow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+
+</RelativeLayout>
+
+
+
+        // add questions
+        <TextView
+            app:layout_constraintTop_toBottomOf="@+id/categorylayout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/addQueTag"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#676666"
+            android:textSize="16sp"
+            android:text="Add Question ?"/>
+
+
+        <EditText
+            app:layout_constraintTop_toBottomOf="@id/addQueTag"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/addQue"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:paddingLeft="10dp"
+            android:gravity="left|center"
+            android:maxLines="1"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="#676666"
+            android:textSize="15sp"
+            android:background="@drawable/textview_outline"
+            android:hint="Add Question Here"/>
+
+// ADD notes
+
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@+id/addQue"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/addNotesTag"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#676666"
+            android:textSize="16sp"
+            android:text="Add Notes ?"/>
+
+
+        <EditText
+            app:layout_constraintTop_toBottomOf="@id/addNotesTag"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/addNotes"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:gravity="left"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:textColor="#676666"
+            android:textSize="15sp"
+            android:background="@drawable/textview_outline"
+            android:hint="Add Notes Here"/>
+
+
+
+
+        // ADD Images
+
+
+        <TextView
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/addNotes"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/addImageTag"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#676666"
+            android:textSize="16sp"
+            android:text="Add Image "/>
+
+
+
+
+        <ImageView
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/addNotes"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/addImage"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/add_image"
+           />
+
+
+        <ImageView
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/addImage"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/imageViewNotes"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+           android:background="@drawable/textview_outline"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

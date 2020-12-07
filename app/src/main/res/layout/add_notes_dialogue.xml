@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="50dp"
+    android:layout_marginRight="50dp"
+    android:layout_gravity="center"
+    android:elevation="6dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      android:background="#EFEEEE"
+      android:id="@+id/ll1"
+      android:layout_height="50dp">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="#393838"
+          android:textSize="20sp"
+          android:gravity="left"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintLeft_toLeftOf="parent"
+          android:layout_margin="10dp"
+          android:text="Flash Crads"
+          android:id="@+id/flashCardTitle"
+          />
+
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="0dp"
+        android:orientation="vertical"
+        android:id="@+id/radioGroup"
+        android:background="#fff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll1">
+
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/algorithm"
+            android:padding="10dp"
+android:layout_marginLeft="10dp"
+            android:text="Algorithm"
+            android:textColor="#635E5E"
+            />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/general"
+            android:text="General"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+
+            android:textColor="#635E5E"
+            />
+
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/syntax"
+            android:padding="10dp"
+            android:text="Syntax"
+            android:layout_marginLeft="10dp"
+
+            android:textColor="#635E5E"
+            />
+
+
+    </RadioGroup>
+
+
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_height="50dp">
+
+        <TextView
+            android:background="#FBFAFA"
+            android:gravity="center"
+            android:textColor="#878585"
+            android:textSize="20dp"
+            android:text="Cancel"
+            android:elevation="6dp"
+            android:id="@+id/cancel"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+<TextView
+    android:elevation="6dp"
+    android:layout_width="1dp"
+    android:layout_height="match_parent"
+    android:background="#454444"/>
+
+
+
+        <TextView
+            android:background="#FBFAFA"
+            android:gravity="center"
+            android:textColor="#878585"
+            android:textSize="20dp"
+            android:text="OK"
+            android:id="@+id/ok"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
